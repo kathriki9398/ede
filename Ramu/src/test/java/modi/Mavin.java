@@ -31,9 +31,16 @@ public class Mavin {
 
     @Test(priority = 1)
     public void testTopLevelMenusAccessibility() {
-        
-        List<WebElement> topMenus = driver.findElements(By.id("main-navigation-new"));
-        Assert.assertEquals(topMenus.size(), 4, "Number of top-level menus is incorrect");
+WebElement home=driver.findElement(By.xpath("//a[normalize-space()='Our Story']"));
+		
+		WebElement oursolutin= driver.findElement(By.xpath("//a[normalize-space()='Our Solution']"));
+		WebElement tendar= driver.findElement(By.xpath("//a[normalize-space()='Why Tendable?']"));
+		
+
+		
+		Assert.assertTrue(home.isDisplayed() && home.isEnabled(), "Our Solution");
+		Assert.assertTrue(home.isDisplayed() && home.isEnabled(), "Our Story");
+		Assert.assertTrue(home.isDisplayed() && home.isEnabled(), "Why Tendable");
 
                 
     }
@@ -78,7 +85,7 @@ public class Mavin {
 		sa.click();
 		driver.findElement(By.xpath("//button[contains(@data-loading-text,'Loading...')][normalize-space()='Submit']")).click();
 		
-        WebElement errorMessage = driver.findElement(By.cssSelector(".message-error"));
+        WebElement errorMessage = driver.findElement(By.xpath("//p[normalize-space()='Sorry, there was an error submitting the form. Please try again.']"));
         Assert.assertTrue(errorMessage.isDisplayed(), "Error message is not displayed for missing Message field");
     }
 

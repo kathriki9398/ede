@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="modi.Mavin">
+      <class name="modi.DD">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testContactUsFormErrorMessage"/>
-          <include name="testRequestDemoButtonPresence"/>
+          <include name="ram"/>
         </methods>
-      </class> <!-- modi.Mavin -->
+      </class> <!-- modi.DD -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
